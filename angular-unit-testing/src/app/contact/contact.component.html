@@ -1,0 +1,12 @@
+<div>
+    <p>{{ text }}</p>
+</div>
+
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+            <input class="form-control" formControlName="name" placeholder="Name...">
+            <input class="form-control" formControlName="email" placeholder="E-mail...">
+            <input class="form-control" formControlName="text" placeholder="Text...">
+    </div>
+    <button type="submit" [disabled]="!contactForm.valid" class="btn btn-success">Save</button>
+</form>
